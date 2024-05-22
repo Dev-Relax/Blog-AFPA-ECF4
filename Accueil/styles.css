@@ -199,6 +199,17 @@ main h1 {
     border-radius: 0 50px 50px 50px;
 }
 
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+    color: #759242;
+}
+.icons i {
+    cursor: pointer;
+}
+
 /**** FOOTER ****/
 footer {
     background-color: #212517;
