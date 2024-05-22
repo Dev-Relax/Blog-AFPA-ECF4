@@ -1,8 +1,5 @@
 <?php
-//query utilisateur
-$dsn = 'mysql:dbname=qrxzfaeafpa;host=phpmyadmin.cluster030.hosting.ovh.net';
-$user = 'qrxzfaeafpa';
-$password = 'Afpa2024';
+require_once 'db.php';
 
 try {
 
