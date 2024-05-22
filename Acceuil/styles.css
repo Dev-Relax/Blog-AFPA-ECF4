@@ -9,12 +9,12 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('images/cover.jpg') no-repeat center center fixed; 
+    background: url('./Images/cover.jpg') no-repeat center center fixed; 
     background-size: cover;
     color: #ddd;
 }
 
-
+/**** HEADER ****/
 .header {
     display: flex;
     justify-content: space-between;
@@ -104,6 +104,7 @@ body {
     color: #DED3A6;
 }
 
+/**** CONTENU ****/
 main {
     padding: 20px;
     text-align: center;
@@ -198,6 +199,7 @@ main h1 {
     border-radius: 0 50px 50px 50px;
 }
 
+/**** FOOTER ****/
 footer {
     background-color: #212517;
     text-align: center;
