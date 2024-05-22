@@ -21,7 +21,7 @@
         
     }
 
-    function recupererCommentairesArticles($article){
+    function recupererCommentairesArticle($article){
         $bdd= connectToBdd();
         $sql = 'SELECT pseudo, contenu, date FROM commentaires c INNER JOIN utilisateurs u ON c.auteur = u.id WHERE article = :article';
         $query = $bdd->prepare($sql);
@@ -30,5 +30,4 @@
         $listCommentaires = $query->fetchAll(PDO::FETCH_ASSOC);
         return $listCommentaires;
     }
-    var_dump(connectToBdd());
 ?>
