@@ -67,6 +67,8 @@ function getAllArticles()
         $sql = 'SELECT * FROM articles';
         $query = $bdd->prepare($sql);
         $query->execute();
+        $rowArticles= $query->fetchAll(PDO::FETCH_ASSOC);
+        return $rowArticles;
     } catch (PDOException $e) {
         die("Erreur : " . $e->getMessage());
     }
@@ -81,6 +83,8 @@ function getArticle($id)
         $query = $bdd->prepare($sql);
         $query->bindParam(':id', $id, PDO::PARAM_INT);
         $query->execute();
+        $rowArticle = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $rowArticle;
     } catch (PDOException $e) {
         die("Erreur : " . $e->getMessage());
     }
