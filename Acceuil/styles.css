@@ -21,16 +21,20 @@ body {
     align-items: center;
     padding: 20px;
     background-color: #212517;
+    height: 80px; /* Fixe la hauteur de l'en-tête */
 }
 
 .header .logo img {
-    width: 100px; /* Ajustez cette valeur selon la taille souhaitée */
-    height: auto;
+    height: 100%; /* Fait en sorte que l'image remplisse la hauteur du conteneur */
+    width: auto;
+    transform: scale(2.5); /* Agrandit l'image sans modifier la hauteur du conteneur */
+    transform-origin: left center; /* Positionne le point de transformation */
 }
 
 .header .logo {
-    font-size: 24px;
-    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 100%; /* S'assure que le conteneur du logo remplit toute la hauteur de l'en-tête */
 }
 
 .header nav ul {
