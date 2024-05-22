@@ -1,6 +1,6 @@
 <?php
 require_once 'db.php';
-function recupererUtilisateur 
+function recupererUtilisateur { 
 try {
 
     $bdd = new PDO($dsn, $user, $password);
@@ -8,16 +8,11 @@ try {
     echo 'Échec lors de la connexion : ' . $Exception->getMessage();
 }
 
-// Vérifiez si 'id' est défini dans $_POST et si c'est un entier
-if (isset($_POST['id']) && filter_var($_POST['id'], FILTER_VALIDATE_INT)) {
-    $id_utilisateur = $_POST['id'];
-
-
-    // 1 preparer la requete
-    $query = $bdd->prepare('SELECT * FROM utilisateurs WHERE id = ?');
-
+   // 1 preparer la requete
+    $query = $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
+     $pseudo = $_POST['pseudo'];
     // 2 executer la requete
-    $query->execute([$id_utilisateur]);
+    $query->execute([$pseudo]);
     $users = $query->fetchAll(PDO::FETCH_ASSOC);
 }
 
