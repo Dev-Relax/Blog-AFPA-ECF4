@@ -1,6 +1,6 @@
 <?php
 require_once 'db.php';
-
+function 
 try {
 
     $bdd = new PDO($dsn, $user, $password);
