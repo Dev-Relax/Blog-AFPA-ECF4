@@ -110,9 +110,9 @@ main {
 }
 
 main h1 {
-    font-size: 2em;
+    font-size: 5em;
     margin-bottom: 20px;
-    color: #b4e197;
+    color: #DED3A6;
 }
 
 .articles-container-wrapper {
@@ -142,9 +142,9 @@ main h1 {
 }
 
 .article img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 100px; /* Taille fixe pour les images */
+    height: 100%; /* Taille fixe pour les images */
+    border-radius: 50px 50px 0 50px; /* Border radius pour les images */
     margin-right: 15px;
 }
 
@@ -154,12 +154,12 @@ main h1 {
 
 .article-content h2 {
     font-size: 1.5em;
-    color: #333;
+    color: #374709;
     margin: 0;
 }
 
 .article-content p {
-    color: #555;
+    color: #374709;
 }
 
 .article-1 {
