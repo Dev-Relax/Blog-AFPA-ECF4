@@ -1,0 +1,112 @@
+/*** Import police de caractères ***/
+@import url(https://fonts.google.com/specimen/Playfair+Display);
+@import url(https://fonts.google.com/specimen/Montserrat);
+
+/**** GENERAL ****/
+*{
+    font-family: 'Playfair Display';
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('images/cover.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #ddd;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #212517;
+}
+
+.header .logo img {
+    width: 100px; /* Ajustez cette valeur selon la taille souhaitée */
+    height: auto;
+}
+
+.header .logo {
+    font-size: 24px;
+    color: #fff;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header nav ul li {
+    margin: 0;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: #759242;
+}
+
+.header .profile-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #b4e197;
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.article {
+    background-color: #d1cbb7;
+    border-radius: 15px;
+    width: 45%;
+    max-width: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.article img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.article-content {
+    text-align: left;
+}
+
+.article-content h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+}
+
+.article-content p {
+    color: #555;
+}
+
+footer {
+    background-color: #212517;
+    text-align: center;
+    padding: 10px;
+    color: #759242;
+}
