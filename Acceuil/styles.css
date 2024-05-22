@@ -205,3 +205,13 @@ footer {
     color: #759242;
 }
 
+footer section article span a {
+    text-decoration: none;
+    color: #759242;
+    font-size: 1.2em;
+    transition: color 0.3s; /* Ajout de transition pour un effet de lissage */
+}
+
+footer section article span a:hover {
+    color: #DED3A6;
+}
