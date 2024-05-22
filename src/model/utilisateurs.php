@@ -1,6 +1,6 @@
 <?php
 require_once 'db.php';
-function recupererUtilisateur { 
+function verifierUtilisateur { 
 try {
 
     $bdd = new PDO($dsn, $user, $password);
@@ -17,6 +17,7 @@ try {
 }
 
 //ajouter un utilisateur
+function ajoutUtilisateur {
 // Vérifiez si les données POST nécessaires sont définies
 if (isset($_POST['nom'], $_POST['prenom'], $_POST['pseudo'], $_POST['mail'], $_POST['mdp'])) {
     $nom = $_POST['nom'];
