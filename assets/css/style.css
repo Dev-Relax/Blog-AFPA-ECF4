@@ -217,6 +217,17 @@ main h1 {
     color: #759242;
 }
 
+.error {
+    color: red;
+}
+
+.inscription {
+    color: #374709;
+}
+
+.terms {
+    color: #374709;
+}
 
 /**** FOOTER ****/
 footer {
