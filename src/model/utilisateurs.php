@@ -1,8 +1,6 @@
 <?php
 require_once 'db.php';
 
-
-
 function verifierUtilisateur($pseudo)
 {
 
@@ -17,29 +15,21 @@ function verifierUtilisateur($pseudo)
 }
 
 //ajouter un utilisateur
-function ajoutUtilisateur()
+function ajoutUtilisateur($nom, $prenom, $pseudo, $mail, $mdp)
 {
 
     $bdd = connectToBdd();
-    // Vérifiez si les données POST nécessaires sont définies
-    if (isset($_POST['nom'], $_POST['prenom'], $_POST['pseudo'], $_POST['mail'], $_POST['mdp'])) {
-        $nom = $_POST['nom'];
-        $prenom = $_POST['prenom'];
-        $pseudo = $_POST['pseudo'];
-        $mail = $_POST['mail'];
-        $mdp = $_POST['mdp'];
 
+    if (!verifierUtilisateur($pseudo)) {
 
-        if (!verifierUtilisateur($pseudo)) {
+        $hash = password_hash($mdp, PASSWORD_BCRYPT);
+        // Préparation de la requête SQL
+        $query = $bdd->prepare('INSERT INTO utilisateurs (nom, prenom, pseudo, mail, mdp) VALUES (?, ?, ?, ?, ?)');
 
-            $hash = password_hash($mdp, PASSWORD_BCRYPT);
-            // Préparation de la requête SQL
-            $query = $bdd->prepare('INSERT INTO utilisateurs (nom, prenom, pseudo, mail, mdp) VALUES (?, ?, ?, ?, ?)');
-
-            // Exécution de la requête avec les valeurs fournies
-            $result = $query->execute([$nom, $prenom, $pseudo, $mail, $hash]);
-        }
         // Exécution de la requête avec les valeurs fournies
-        $result = $query->execute([$nom, $prenom, $pseudo, $mail, $mdp]);
+        $result = $query->execute([$nom, $prenom, $pseudo, $mail, $hash]);
     }
+    // Exécution de la requête avec les valeurs fournies
+    $result = $query->execute([$nom, $prenom, $pseudo, $mail, $mdp]);
+    
 }
