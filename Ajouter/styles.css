@@ -139,7 +139,8 @@ body {
 }
 
 .form-container input[type="text"],
-.form-container textarea {
+.form-container textarea,
+.form-container select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
