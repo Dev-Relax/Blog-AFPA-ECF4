@@ -28,4 +28,4 @@ function ajoutUtilisateur($nom, $prenom, $pseudo, $mail, $mdp)
         $result = $query->execute([$nom, $prenom, $pseudo, $mail, $hash]);
     }
     return $result;
-}w
+}
