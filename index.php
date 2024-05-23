@@ -12,14 +12,20 @@ route('/Blog-AFPA-ECF4', function () {
 
 route('/Blog-AFPA-ECF4/connexion', function () {
     require_once "./src/template/connexion.php";
-    echo "connexion";
-    echo "<br>";
 });
 
 route('/Blog-AFPA-ECF4/ajout', function () {
     require_once "./src/template/ajouter.php";
-    echo "ajouter";
-    echo "<br>";
+});
+
+route('/Blog-AFPA-ECF4/article-', function ($id) {
+    $article_id = $id;
+    require_once "./src/template/article.php";
+});
+
+route('/Blog-AFPA-ECF4/modifier-', function ($id) {
+    $article_id = $id;
+    require_once "./src/template/modifier.php";
 });
 
 function route(string $path, callable $callback)
@@ -37,9 +43,22 @@ function run()
     $found = false;
     foreach ($routes as $path => $callback) {
 
-        
+        // echo $path;
+        // echo "<br>";
+        // echo preg_match('/(\/Blog-AFPA-ECF4\/article-*)./', $path);
+        // echo "<br>";
 
-        if($path !== $uri) continue; 
+        if (preg_match('/(\/Blog-AFPA-ECF4\/article-*)./', $path) == 1 && preg_match('/(\/Blog-AFPA-ECF4\/article-*)./', $uri) == 1) {
+            $id = preg_replace('/(\/Blog-AFPA-ECF4\/article-)/', '', $uri);
+            $found = true;
+            $callback($id);
+        }
+        if (preg_match('/(\/Blog-AFPA-ECF4\/modifier-*)./', $path) == 1 && preg_match('/(\/Blog-AFPA-ECF4\/modifier-*)./', $uri) == 1) {
+            $id = preg_replace('/(\/Blog-AFPA-ECF4\/modifier-)/', '', $uri);
+            $found = true;
+            $callback($id);
+        }
+        if ($path !== $uri) continue;
 
         $found = true;
         $callback();

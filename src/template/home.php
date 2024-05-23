@@ -16,13 +16,13 @@ require_once "./src/model/articles.php";
                 <article class="article article-<?= $article["id"] ?>">
 
 
-                    <img src="./Images/profil1.jpg" alt="Image de l'article 1">
+                    <img src="" alt="Image de l'article 1">
                     <div class="article-content">
-                        <h2><?= $article["titre"] ?></h2>
+                        <a href="/Blog-AFPA-ECF4/article-<?= $article["id"] ?>"><h2><?= $article["titre"] ?></h2></a>
                         <p><?= $article["contenu"] ?></p>
                     </div>
                     <div class="icons">
-                        <i class="fas fa-edit"></i>
+                        <a href="/Blog-AFPA-ECF4/modifier-<?= $article["id"] ?>"><i class="fas fa-edit"></i></a>
                         <i class="fas fa-comment"></i>
                     </div>
                 </article>

@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $categorie = $_POST["catégorie"];
 
     ajouterArticle("test", $contenu, $titre, $categorie);
+    header("Location: /Blog-AFPA-ECF4/");
 }
 
 ?>
