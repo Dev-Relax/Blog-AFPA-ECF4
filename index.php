@@ -32,6 +32,11 @@ route('/Blog-AFPA-ECF4/modifier-', function ($id) {
     require_once "./src/template/modifier.php";
 });
 
+route('/Blog-AFPA-ECF4/rgpd', function ($id) {
+    $article_id = $id;
+    require_once "./src/template/rgpd.php";
+});
+
 function route(string $path, callable $callback)
 {
     global $routes;
