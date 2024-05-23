@@ -120,7 +120,8 @@ body {
     background-color: #DED3A6; /* Couleur de fond pour le formulaire */
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px #759242 solid;
+    box-shadow: 6px 6px 25px rgba(117, 146, 66, 1);
     text-align: center;
 }
 
