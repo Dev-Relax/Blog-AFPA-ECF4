@@ -1,6 +1,11 @@
-        <footer>
-            Blog créé par - 
-        </footer>
-        <script type="text/javascript" src="../../assets/js/scripts.js"></script>
-    </body>
+    <footer>
+        <section>
+            <article>
+                <span>&copy; COPYRIGHT 2024 - <a href="../RGPD/rgpd.html">Tous Droits Réservés</a></span>
+            </article>
+        </section>
+    </footer>
+
+</body>
+
 </html>

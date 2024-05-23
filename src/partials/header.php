@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog ECF4</title>
-    <link href="../../assets/css/styles.css" rel="stylesheet">
+    <meta name="description" content="B.log - Blog d'articles divers et variés">
+    <meta name="keywords" content="blog, articles, B.log, informations">
+    <meta name="author" content="Votre Nom">
+    <meta property="og:title" content="B.log">
+    <meta property="og:description" content="Découvrez des articles intéressants sur B.log.">
+    <meta property="og:image" content="URL_de_l'image_de_prévisualisation">
+    <meta property="og:url" content="URL_de_votre_site">
+    <title><?= $title ?></title>
+    <link rel="icon" type="image/x-icon" href="../Accueil/Images/B.png">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">      <!--Font Awesome -->
 </head>
 <body>
-    
+    <header class="header">
+        <div class="logo">
+            <img src="../Accueil/Images/B.png" title="logo" alt="Logo de B.log" /> <!--à voir pour faire un href au clic logo-->
+        </div>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <ul class="navbar">
+                    <li class="nav-item"><a class="nav-link" href="../Accueil/index.html">Accueil</a></li>
+                    <li class="nav-item">|</li>
+                    <li class="nav-item"><a class="nav-link" href="../Ajouter/ajouter.html">Ajouter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="profile-section">
+            <div class="profile-icon">
+                <img src="../Accueil/Images/user.png" alt="Icône de profil" class="profile-icon-image">
+            </div>
+            <a href="../User/login.html" class="login-link">SE CONNECTER</a>
+        </div>
+    </header>
