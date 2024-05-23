@@ -109,7 +109,7 @@ body {
     background-color: rgba(33, 37, 23, 0.8); /* Couleur de fond avec transparence */
     padding: 50px;
     margin: 100px auto;
-    border-radius: 15px;
+    border-radius: 50px;
     max-width: 800px;
     display: flex;
     justify-content: center;
@@ -119,7 +119,7 @@ body {
     width: 100%;
     background-color: #DED3A6; /* Couleur de fond pour le formulaire */
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 50px;
     border: 2px #759242 solid;
     box-shadow: 6px 6px 25px rgba(117, 146, 66, 1);
     text-align: center;
