@@ -1,5 +1,7 @@
 <?php
 
+require_once "./src/model/articles.php";
+require_once "./src/model/categories.php";
 
 $routes = [];
 
@@ -11,6 +13,12 @@ route('/Blog-AFPA-ECF4', function () {
 route('/Blog-AFPA-ECF4/connexion', function () {
     require_once "./src/template/connexion.php";
     echo "connexion";
+    echo "<br>";
+});
+
+route('/Blog-AFPA-ECF4/ajout', function () {
+    require_once "./src/template/ajouter.php";
+    echo "ajouter";
     echo "<br>";
 });
 
