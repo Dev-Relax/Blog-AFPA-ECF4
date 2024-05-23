@@ -3,7 +3,6 @@ require_once 'db.php';
 
 function verifierUtilisateur($pseudo)
 {
-
     $bdd = connectToBdd();
 
     // 1 preparer la requete
@@ -11,15 +10,14 @@ function verifierUtilisateur($pseudo)
     // 2 executer la requete
     $query->execute([$pseudo]);
     $users = $query->fetchAll(PDO::FETCH_ASSOC);
-    return ($users > 0) ? true : false;
+    return (count($users) > 0) ? true : false;
 }
 
 //ajouter un utilisateur
 function ajoutUtilisateur($nom, $prenom, $pseudo, $mail, $mdp)
 {
-
     $bdd = connectToBdd();
-
+    $result = false;
     if (!verifierUtilisateur($pseudo)) {
 
         $hash = password_hash($mdp, PASSWORD_BCRYPT);
@@ -29,7 +27,5 @@ function ajoutUtilisateur($nom, $prenom, $pseudo, $mail, $mdp)
         // Exécution de la requête avec les valeurs fournies
         $result = $query->execute([$nom, $prenom, $pseudo, $mail, $hash]);
     }
-    // Exécution de la requête avec les valeurs fournies
-    $result = $query->execute([$nom, $prenom, $pseudo, $mail, $mdp]);
-    
-}
+    return $result;
+}w
