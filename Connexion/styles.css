@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('./Images/cover.jpg') no-repeat center center fixed; 
+    background: url('../Accueil/Images/cover.jpg') no-repeat center center fixed; 
     background-size: cover;
     color: #ddd;
 }
