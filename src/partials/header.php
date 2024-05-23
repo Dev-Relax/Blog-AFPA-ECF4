@@ -24,9 +24,9 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <ul class="navbar">
-                    <li class="nav-item"><a class="nav-link" href="../Accueil/index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Blog-AFPA-ECF4/">Accueil</a></li>
                     <li class="nav-item">|</li>
-                    <li class="nav-item"><a class="nav-link" href="../Ajouter/ajouter.html">Ajouter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Blog-AFPA-ECF4/ajout">Ajouter</a></li>
                 </ul>
             </div>
         </nav>
