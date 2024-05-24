@@ -10,7 +10,7 @@ function ajouterArticle($auteur, $contenu, $titre, $categorie)
     try {
         $sql = 'INSERT INTO articles (auteur, contenu, titre, date, catégorie) 
         VALUES (
-            (SELECT id FROM utilisateurs WHERE pseudo = :auteur), 
+            :auteur, 
             :contenu, 
             :titre, 
             :date, 
@@ -64,7 +64,7 @@ function getAllArticles()
     $bdd = connectToBdd();
 
     try {
-        $sql = 'SELECT a.id, titre, contenu, pseudo, date, catégorie FROM articles a INNER JOIN utilisateurs u ON a.auteur = u.id';
+        $sql = 'SELECT a.id, titre, contenu, auteur, pseudo, date, catégorie FROM articles a INNER JOIN utilisateurs u ON a.auteur = u.id';
         $query = $bdd->prepare($sql);
         $query->execute();
         $rowArticles= $query->fetchAll(PDO::FETCH_ASSOC);

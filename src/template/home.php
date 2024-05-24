@@ -23,7 +23,7 @@ if(isset($_SESSION["user_mail"])){
                     </div>
                     <div class="icons">
                         <?php if(isset($utilisateur)):
-                            if($utilisateur["pseudo"] == $article["pseudo"]): ?>
+                            if($utilisateur["id"] == $article["auteur"]): ?>
                                <a href="/Blog-AFPA-ECF4/modifier-<?= $article["id"] ?>"><i class="fas fa-edit"></i></a>
                                 <?php 
                                 endif;

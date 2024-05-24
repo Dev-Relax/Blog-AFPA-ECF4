@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $mail = $_POST['mail'];
     $mdp = $_POST['mdp'];
     if(ajoutUtilisateur($nom, $prenom, $pseudo, $mail, $mdp)){
-        header("Location: /Blog-AFPA-ECF4/");
+        header("Location: /Blog-AFPA-ECF4/login");
     }else{
         $error = true;
     }
