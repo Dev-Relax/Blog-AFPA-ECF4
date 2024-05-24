@@ -50,15 +50,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <textarea id="comment<?= $commentaire["id"]?>" name="comment<?= $commentaire["id"]?>" rows="3" readonly><?= $commentaire["contenu"] ?></textarea>
                 <?php endforeach; ?>
             </form>
-            <form method="POST" action="">
-                <label for="new-comment">Formulaire d'ajout de commentaire</label>
-                <textarea id="new-comment" name="new-comment" rows="5" required></textarea>
+            <?php if(isset($_SESSION["user_mail"])): ?>
+                <form method="POST" action="">
+                    <label for="new-comment">Formulaire d'ajout de commentaire</label>
+                    <textarea id="new-comment" name="new-comment" rows="5" required></textarea>
 
-                <div class="form-buttons">
-                    <button type="submit" class="save-button">Ajouter</button>
-                    <button type="reset" class="cancel-button">Annuler</button>
-                </div>
-            </form>
+                    <div class="form-buttons">
+                        <button type="submit" class="save-button">Ajouter</button>
+                        <button type="reset" class="cancel-button">Annuler</button>
+                    </div>
+                </form>
+            <?php else: ?>
+                <p>Pour poster un commentaire, veuillez vous <a href="/Blog-AFPA-ECF4/login">connecter</a>.
+            <?php endif; ?>
         </div>
     </div>
 </main>
