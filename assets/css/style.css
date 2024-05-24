@@ -311,6 +311,26 @@ footer section article span a:hover {
     font-family: 'Montserrat', sans-serif;
 }
 
+.form-container .edit-button{
+    background-color: #dc3545;
+    color: #DED3A6;
+    transition: background-color 0.3s; 
+}
+
+.form-container .edit-button:hover{
+    background-color: #e57373;
+}
+
+.form-container .delete-button{
+    background-color: #dc3545;
+    color: #DED3A6;
+    transition: background-color 0.3s;
+}
+
+.form-container .delete-button:hover{
+    background-color: #e57373;
+}
+
 .form-container .save-button {
     background-color: #374709;
     color: #DED3A6;
