@@ -19,7 +19,7 @@ if(isset($_SESSION["user_mail"])){
                     <img src="./assets/img/profil<?= $i % 6 + 1 ?>.jpg" alt="Image de l'article <?= $i + 1 ?>">
                     <div class="article-content">
                         <a href="/Blog-AFPA-ECF4/article-<?= $article["id"] ?>"><h2><?= $article["titre"] ?></h2></a>
-                        <p><?= $article["contenu"] ?></p>
+                        <p><?= (strlen($article["contenu"]) > 103) ? substr($article["contenu"],0,100).'...' : $article["contenu"]; ?></p>
                     </div>
                     <div class="icons">
                         <?php if(isset($utilisateur)):

@@ -48,7 +48,7 @@ if(isset($_SESSION["user_mail"])){
                 <label for="category">Catégorie</label>
                 <input type="text" id="category" name="category" value="Catégorie de l'article" readonly>
                 
-                <h2>Commentaires</h2>
+                <h2 class="commentaire">Commentaires</h2>
                 <?php
                 $commentaires = recupererCommentairesArticle($article_id);
         
@@ -68,7 +68,7 @@ if(isset($_SESSION["user_mail"])){
                     </div>
                 </form>
             <?php else: ?>
-                <p>Pour poster un commentaire, veuillez vous <a href="/Blog-AFPA-ECF4/login">connecter</a>.
+                <p class="error">Pour poster un commentaire, veuillez vous <a href="/Blog-AFPA-ECF4/login">connecter</a>.
             <?php endif; ?>
         </div>
     </div>
