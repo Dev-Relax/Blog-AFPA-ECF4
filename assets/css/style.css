@@ -88,10 +88,9 @@ body {
 }
 
 .header .profile-icon img {
-    height: 100%;
-    width: auto;
-    transform: scale(0.1);
-    transform-origin: right center;
+    height: 70px;
+    width: 70px;
+    
 }
 
 .header .login-link {
