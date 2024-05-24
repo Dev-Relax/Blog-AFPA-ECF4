@@ -8,7 +8,7 @@ function ajouterArticle($auteur, $contenu, $titre, $categorie)
     $bdd = connectToBdd();
 
     try {
-        $sql = 'INSERT INTO articles (auteur, contenu, titre, date, categorie) 
+        $sql = 'INSERT INTO articles (auteur, contenu, titre, date, catégorie) 
         VALUES (
             (SELECT id FROM utilisateurs WHERE pseudo = :auteur), 
             :contenu, 
