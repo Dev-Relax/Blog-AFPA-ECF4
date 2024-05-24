@@ -10,10 +10,11 @@ require_once "./src/model/articles.php";
     <div class="articles-container-wrapper">
         <div class="articles-container">
             <?php $articles = getAllArticles();
-
+            $i = 0;
             foreach ($articles as $article) :
+                
             ?>
-                <article class="article article-<?= $article["id"] ?>">
+                <article class="article article-<?= $i % 6 + 1 ?>">
 
 
                     <img src="" alt="Image de l'article 1">
@@ -26,7 +27,8 @@ require_once "./src/model/articles.php";
                         <i class="fas fa-comment"></i>
                     </div>
                 </article>
-            <?php endforeach; ?>
+            <?php $i++;
+                endforeach; ?>
 
         </div>
     </div>
