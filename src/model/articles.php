@@ -64,7 +64,7 @@ function getAllArticles()
     $bdd = connectToBdd();
 
     try {
-        $sql = 'SELECT * FROM articles';
+        $sql = 'SELECT a.id, titre, contenu, pseudo, date, catégorie FROM articles a INNER JOIN utilisateurs u ON a.auteur = u.id';
         $query = $bdd->prepare($sql);
         $query->execute();
         $rowArticles= $query->fetchAll(PDO::FETCH_ASSOC);
