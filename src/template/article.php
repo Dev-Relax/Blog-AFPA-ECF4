@@ -5,7 +5,7 @@ $article = getArticle($article_id)[0];
 $title = "B.log - " . $article["titre"];
 require_once "./src/partials/header.php";
 require_once "./src/model/commentaires.php";
-
+require_once "./src/model/utilisateurs.php";
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -23,15 +23,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
+if(isset($_SESSION["user_mail"])){
+    $utilisateur = getUtilisateur($_SESSION["user_mail"]);
+}
 ?>
 
 <main>
     <div class="form-container-wrapper">
         <div class="form-container">
-            <form method="POST" action="">
-                <button class="edit-button" name="modifier" value="<?= $article_id ?>">Modifier</button>
-                <button class="delete-button" name="supprimer" value="<?= $article_id ?>">Supprimer la publication</button>
-            </form>
+            <?php if(isset($utilisateur)):
+                 if($utilisateur["id"] == $article["auteur"]): ?>
+                    <form method="POST" action="">
+                        <button class="edit-button" name="modifier" value="<?= $article_id ?>">Modifier</button>
+                        <button class="delete-button" name="supprimer" value="<?= $article_id ?>">Supprimer la publication</button>
+                    </form>
+                    <?php endif;
+                endif; ?>
             <form>
                 <h1><?= $article["titre"] ?></h1>
 
