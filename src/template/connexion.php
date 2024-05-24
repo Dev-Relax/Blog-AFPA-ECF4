@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $mail = $_POST["email"];
     $password = $_POST["password"];
-    echo "tourte";
+
     $user = authUtilisateur($mail, $password);
     if ($user !== -1) {
         $_SESSION["user_id"] = $user;

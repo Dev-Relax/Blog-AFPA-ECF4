@@ -7,8 +7,6 @@ session_start();
 
 $routes = [];
 
-var_dump($_SESSION["user_id"]);
-
 route('/Blog-AFPA-ECF4', function () {
     require_once "./src/template/home.php";
     echo "<br>";
