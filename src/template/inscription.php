@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <div class="form-container-wrapper">
         <div class="form-container">
             <h1>Inscription</h1>
-            <p class="inscription">Vous avez déjà un compte ? <a href="./Blog-AFPA-ECF4/login" class="connexion-link">Connexion</a></p>
+            <p class="inscription">Vous avez déjà un compte ? <a href="/Blog-AFPA-ECF4/login" class="connexion-link">Connexion</a></p>
             <form method="post" action="">
                 <label for="pseudo">Pseudo</label>
                 <input type="text" id="pseudo" name="pseudo" required>
@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <button type="submit" class="save-button">S'inscrire</button>
                 </div>
             </form>
-            <p class="terms">En vous inscrivant, vous acceptez les <a href="./Blog-AFPA-ECF4/rgpd">Conditions et la Charte de gestion des données</a>.</p>
+            <p class="terms">En vous inscrivant, vous acceptez les <a href="/Blog-AFPA-ECF4/rgpd">Conditions et la Charte de gestion des données</a>.</p>
         </div>
     </div>
 </main>
