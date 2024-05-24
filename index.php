@@ -3,14 +3,18 @@
 require_once "./src/model/articles.php";
 require_once "./src/model/categories.php";
 
+session_start();
+
 $routes = [];
+
+var_dump($_SESSION["user_id"]);
 
 route('/Blog-AFPA-ECF4', function () {
     require_once "./src/template/home.php";
     echo "<br>";
 });
 
-route('/Blog-AFPA-ECF4/connexion', function () {
+route('/Blog-AFPA-ECF4/login', function () {
     require_once "./src/template/connexion.php";
 });
 
