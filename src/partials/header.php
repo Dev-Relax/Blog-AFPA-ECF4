@@ -24,7 +24,7 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <ul class="navbar">
-                    <li class="nav-item"><a class="nav-link" href="/Blog-AFPA-ECF4/">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Blog-AFPA-ECF4">Accueil</a></li>
                     <li class="nav-item">|</li>
                     <li class="nav-item"><a class="nav-link" href="/Blog-AFPA-ECF4/ajout">Ajouter</a></li>
                 </ul>
@@ -34,6 +34,6 @@
             <div class="profile-icon">
                 <img src="./assets/img/user.png" alt="Icône de profil" class="profile-icon-image">
             </div>
-            <a href="/Blog-AFPA-ECF4/connexion" class="login-link">SE CONNECTER</a>
+            <a href="/Blog-AFPA-ECF4/login" class="login-link">SE CONNECTER</a>
         </div>
     </header>
