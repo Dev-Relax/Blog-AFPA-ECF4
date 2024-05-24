@@ -11,13 +11,9 @@ require_once "./src/model/articles.php";
         <div class="articles-container">
             <?php $articles = getAllArticles();
             $i = 0;
-            foreach ($articles as $article) :
-                
-            ?>
+            foreach ($articles as $article) : ?>
                 <article class="article article-<?= $i % 6 + 1 ?>">
-
-
-                    <img src="" alt="Image de l'article 1">
+                    <img src="./assets/img/user.png" alt="Image de l'article 1">
                     <div class="article-content">
                         <a href="/Blog-AFPA-ECF4/article-<?= $article["id"] ?>"><h2><?= $article["titre"] ?></h2></a>
                         <p><?= $article["contenu"] ?></p>
