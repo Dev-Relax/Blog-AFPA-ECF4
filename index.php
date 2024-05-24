@@ -16,6 +16,10 @@ route('/Blog-AFPA-ECF4/login', function () {
     require_once "./src/template/connexion.php";
 });
 
+route('/Blog-AFPA-ECF4/logout', function () {
+    require_once "./src/template/deconnexion.php";
+});
+
 route('/Blog-AFPA-ECF4/inscription', function () {
     require_once "./src/template/inscription.php";
 });

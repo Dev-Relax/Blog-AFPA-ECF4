@@ -34,6 +34,10 @@
             <div class="profile-icon">
                 <img src="./assets/img/user.png" alt="Icône de profil" class="profile-icon-image">
             </div>
-            <a href="/Blog-AFPA-ECF4/login" class="login-link">SE CONNECTER</a>
+            <?php if(isset($_SESSION["user_mail"])): ?>
+                <a href="/Blog-AFPA-ECF4/logout" class="login-link">SE DECONNECTER</a>
+            <?php else: ?>
+                <a href="/Blog-AFPA-ECF4/login" class="login-link">SE CONNECTER</a>
+            <?php endif?>
         </div>
     </header>
