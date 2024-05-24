@@ -155,9 +155,16 @@ main h1 {
 }
 
 .article-content h2 {
+    text-decoration: none;
     font-size: 1.5em;
     color: #374709;
     margin: 0;
+    transition: color 0.3s;
+    
+}
+
+.article-content h2:hover {
+    color: #759242;
 }
 
 .article-content p {
