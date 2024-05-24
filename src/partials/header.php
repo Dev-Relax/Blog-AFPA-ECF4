@@ -25,8 +25,10 @@
             <div class="container-fluid">
                 <ul class="navbar">
                     <li class="nav-item"><a class="nav-link" href="/Blog-AFPA-ECF4">Accueil</a></li>
-                    <li class="nav-item">|</li>
-                    <li class="nav-item"><a class="nav-link" href="/Blog-AFPA-ECF4/ajout">Ajouter</a></li>
+                    <?php if(isset($_SESSION["user_mail"])): ?>
+                        <li class="nav-item">|</li>
+                        <li class="nav-item"><a class="nav-link" href="/Blog-AFPA-ECF4/ajout">Ajouter</a></li>
+                    <?php  endif; ?>
                 </ul>
             </div>
         </nav>
