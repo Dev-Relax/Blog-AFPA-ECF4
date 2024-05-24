@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     <button type="submit" class="save-button">S'inscrire</button>
                 </div>
             </form>
-            <p class="terms">En vous inscrivant, vous acceptez les <a href="#">Conditions</a> et la <a href="#">Charte de gestion des données</a>.</p>
+            <p class="terms">En vous inscrivant, vous acceptez les <a href="./Blog-AFPA-ECF4/rgpd">Conditions et la Charte de gestion des données</a>.</p>
         </div>
     </div>
 </main>
