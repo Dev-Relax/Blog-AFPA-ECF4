@@ -13,7 +13,7 @@ require_once "./src/model/articles.php";
             $i = 0;
             foreach ($articles as $article) : ?>
                 <article class="article article-<?= $i % 6 + 1 ?>">
-                    <img src="./assets/img/profil<?= $i + 1 ?>.jpg" alt="Image de l'article <?= $i + 1 ?>">
+                    <img src="./assets/img/profil<?= $i % 6 + 1 ?>.jpg" alt="Image de l'article <?= $i + 1 ?>">
                     <div class="article-content">
                         <a href="/Blog-AFPA-ECF4/article-<?= $article["id"] ?>"><h2><?= $article["titre"] ?></h2></a>
                         <p><?= $article["contenu"] ?></p>
