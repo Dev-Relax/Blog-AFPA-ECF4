@@ -3,8 +3,11 @@
 $title = "B.log - Accueil";
 require_once "./src/partials/header.php";
 require_once "./src/model/articles.php";
-?>
+require_once "./src/model/utilisateurs.php";
 
+if(isset($_SESSION["user_mail"])){
+    $utilisateur = getUtilisateur($_SESSION["user_mail"]);
+} ?>
 <main>
     <h1>B.log Articles</h1>
     <div class="articles-container-wrapper">
@@ -19,7 +22,13 @@ require_once "./src/model/articles.php";
                         <p><?= $article["contenu"] ?></p>
                     </div>
                     <div class="icons">
-                        <a href="/Blog-AFPA-ECF4/modifier-<?= $article["id"] ?>"><i class="fas fa-edit"></i></a>
+                        <?php if(isset($utilisateur)):
+                            if($utilisateur["pseudo"] == $article["pseudo"]): ?>
+                               <a href="/Blog-AFPA-ECF4/modifier-<?= $article["id"] ?>"><i class="fas fa-edit"></i></a>
+                                <?php 
+                                endif;
+                            endif;
+                            ?>
                         <i class="fas fa-comment"></i>
                     </div>
                 </article>
