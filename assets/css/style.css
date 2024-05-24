@@ -141,6 +141,7 @@ main h1 {
     display: flex;
     align-items: center;
     padding: 50px;
+    justify-content: space-between;
 }
 
 .article img {
@@ -160,7 +161,7 @@ main h1 {
     color: #374709;
     margin: 0;
     transition: color 0.3s;
-    
+    text-align:center;
 }
 
 .article-content h2:hover {
