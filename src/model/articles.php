@@ -79,7 +79,7 @@ function getArticle($id)
     $bdd = connectToBdd();
 
     try {
-        $sql = 'SELECT * FROM articles WHERE id = :id';
+        $sql = 'SELECT a.id, titre, contenu, auteur, pseudo, date, catégorie FROM articles a INNER JOIN utilisateurs u ON a.auteur = u.id WHERE a.id = :id';
         $query = $bdd->prepare($sql);
         $query->bindParam(':id', $id, PDO::PARAM_INT);
         $query->execute();
