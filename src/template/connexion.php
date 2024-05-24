@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $user = authUtilisateur($mail, $password);
     if ($user !== -1) {
-        $_SESSION["user_id"] = $user;
+        $_SESSION["user_mail"] = $user;
     }
 
     header("Location: /Blog-AFPA-ECF4");

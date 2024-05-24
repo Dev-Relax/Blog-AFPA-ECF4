@@ -43,7 +43,7 @@ function authUtilisateur($mail, $password)
             $user = getUtilisateur($mail);
 
             if (password_verify($password, $user["mdp"])) {
-                return $user['id'];
+                return $user['mail'];
             } else {
 
                 return -1;
