@@ -12,6 +12,7 @@ body {
     background: url('../img/cover.jpg') no-repeat center center fixed; 
     background-size: cover;
     color: #ddd;
+    position: relative;
 }
 
 /**** HEADER ****/
@@ -144,7 +145,7 @@ main h1 {
 
 .article img {
     width: 100px; /* Taille fixe pour les images */
-    height: 100%; /* Taille fixe pour les images */
+    height: auto; /* Taille fixe pour les images */
     border-radius: 50px 50px 0 50px; /* Border radius pour les images */
     margin-right: 15px;
 }
@@ -230,6 +231,10 @@ main h1 {
 
 /**** FOOTER ****/
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
     background-color: #212517;
     text-align: center;
     padding: 10px;
