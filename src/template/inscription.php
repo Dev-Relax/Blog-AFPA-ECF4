@@ -26,13 +26,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             <form method="post" action="">
                 <label for="pseudo">Pseudo</label>
                 <input type="text" id="pseudo" name="pseudo" required>
-                <?= !$error ? "" : "<p class='error'>ERRREUR : Ce pseudo n'est pas disponible</p>"; ?>
+                
                 <label for="prenom">Prénom</label>
                 <input type="text" id="first-name" name="prenom" required>
 
                 <label for="nom">Nom</label>
                 <input type="text" id="last-name" name="nom" required>
-
+                <?= !$error ? "" : "<p class='error'>ERRREUR : Cette addresse e-mail n'est pas disponible</p>"; ?>
                 <label for="mail">E-mail</label>
                 <input type="email" id="email" name="mail" required>
 
