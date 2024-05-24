@@ -23,7 +23,7 @@
 
     function recupererCommentairesArticle($article){
         $bdd= connectToBdd();
-        $sql = 'SELECT pseudo, contenu, date FROM commentaires c INNER JOIN utilisateurs u ON c.auteur = u.id WHERE article = :article';
+        $sql = 'SELECT c.id, pseudo, contenu, date FROM commentaires c INNER JOIN utilisateurs u ON c.auteur = u.id WHERE article = :article';
         $query = $bdd->prepare($sql);
         $query->bindParam(':article', $article, PDO::PARAM_INT);
         $query->execute();
