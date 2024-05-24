@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <div class="form-container-wrapper">
         <div class="form-container">
             <h1>Inscription</h1>
-            <p class="inscription">Vous avez déjà un compte ? <a href="../User/login.html" class="connexion-link">Connexion</a></p>
+            <p class="inscription">Vous avez déjà un compte ? <a href="./Blog-AFPA-ECF4/login" class="connexion-link">Connexion</a></p>
             <form method="post" action="">
                 <label for="pseudo">Pseudo</label>
                 <input type="text" id="pseudo" name="pseudo" required>

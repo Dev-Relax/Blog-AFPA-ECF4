@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="form-container-wrapper">
         <div class="form-container">
             <h1>Connexion</h1>
-            <p>Bon retour parmi nous.</p>
+            <p class="inscription">Bon retour parmi nous.</p>
             <?= !$error ? "" : "<p class='error'>ERRREUR : L'addresse e-mail ou le mot de passe que vous avez rentrez est incorrecte.</p>"; ?>
             <form method="POST" action="">
                 <label for="email">E-mail</label>

@@ -300,6 +300,8 @@ footer section article span a:hover {
 }
 
 .form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
 .form-container textarea,
 .form-container select {
     width: 100%;
