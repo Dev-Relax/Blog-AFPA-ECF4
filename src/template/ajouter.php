@@ -2,16 +2,17 @@
 
 $title = "B.log - Ajouter un article";
 require_once "./src/partials/header.php";
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+require_once "./src/model/articles.php";
+require_once "./src/model/utilisateurs.php";
+if(isset($_SESSION["user_mail"])):
+    $utilisateur = getUtilisateur($_SESSION['user_mail']);
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $contenu = $_POST["contenu"];
     $titre = $_POST["titre"];
     $categorie = $_POST["catégorie"];
-
-    ajouterArticle("test", $contenu, $titre, $categorie);
+    ajouterArticle($utilisateur["id"], $contenu, $titre, $categorie);
     header("Location: /Blog-AFPA-ECF4/");
-}
-
+    }
 ?>
 
 <main>
@@ -48,4 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <?php
 require_once "./src/partials/footer.php";
+else:
+    header("Location: /Blog-AFPA-ECF4/login");
+endif;
 ?>
