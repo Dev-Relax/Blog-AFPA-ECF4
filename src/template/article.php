@@ -11,6 +11,7 @@ require_once "./src/partials/header.php";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['supprimer'])) {
         supprimerArticle($_POST["supprimer"]);
+        header("Location: /Blog-AFPA-ECF4");
     }
 
     if(isset($_POST["modifier"])){

@@ -1,10 +1,10 @@
 <?php
 function connectToBdd()
 {
-  $servername = "";
-  $username = "";
+  $servername = "localhost";
+  $username = "root";
   $password = "";
-  $database = "";
+  $database = "blog_afpa_ecf4";
   try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
     $conn->exec('SET NAMES UTF8');
